@@ -2,12 +2,17 @@
   "author": "Ian Jennings",
   "name": "chat-engine-muter",
   "version": "0.0.4",
-  "main": "src/plugin.js",
+  "main": "src/plugin-compiled.js",
   "dependencies": {
     "chat-engine": "^0.9.5"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "build": "babel src/plugin.js -o src/plugin-compiled.js --presets=env"
   }
 }
